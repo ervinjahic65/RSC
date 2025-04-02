@@ -571,7 +571,7 @@
                             <div class="elementor-element elementor-element-d86dc41 elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="d86dc41" data-element_type="widget" data-widget_type="button.default">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
-                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="#form">
                                         <span class="elementor-button-content-wrapper">
                                         <span class="elementor-button-text">GET A FREE CONSULTATION</span>
                                         </span>
@@ -1169,7 +1169,7 @@
                             <div class="elementor-element elementor-element-6e8a8b4 elementor-align-center elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="6e8a8b4" data-element_type="widget" data-widget_type="button.default">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
-                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="#form">
                                         <span class="elementor-button-content-wrapper">
                                         <span class="elementor-button-text">Chat with an expert</span>
                                         </span>
@@ -1188,7 +1188,7 @@
                     <div class="elementor-element elementor-element-5164ccd e-con-full e-flex e-con e-child" data-id="5164ccd" data-element_type="container">
                         <div class="elementor-element elementor-element-a113f9a elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="a113f9a" data-element_type="widget" data-widget_type="theme-site-logo.default">
                             <div class="elementor-widget-container">
-                                <a href="#">
+                                <a>
                                 	<img width="995" height="429" src="#" class="attachment-full size-full wp-image-349" alt="Logo" sizes="(max-width: 995px) 100vw, 995px">				
 								</a>
                             </div>
@@ -1275,40 +1275,40 @@
         </footer>
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
-    const faqContainer = document.querySelector('.elementor-element-da05e92.elementor-widget-toggle');
-    if (faqContainer) {
-        const toggleItems = faqContainer.querySelectorAll('.elementor-toggle-item');
+				const faqContainer = document.querySelector('.elementor-element-da05e92.elementor-widget-toggle');
+				if (faqContainer) {
+					const toggleItems = faqContainer.querySelectorAll('.elementor-toggle-item');
 
-        toggleItems.forEach(item => {
-            const title = item.querySelector('.elementor-tab-title');
-            const content = item.querySelector('.elementor-tab-content');
+					toggleItems.forEach(item => {
+						const title = item.querySelector('.elementor-tab-title');
+						const content = item.querySelector('.elementor-tab-content');
 
-            if (title && content) {
-                title.addEventListener('click', function() {
-                    const isExpanded = title.getAttribute('aria-expanded') === 'true';
+						if (title && content) {
+							title.addEventListener('click', function() {
+								const isExpanded = title.getAttribute('aria-expanded') === 'true';
 
-                    // Toggle aria-expanded on the title
-                    title.setAttribute('aria-expanded', !isExpanded);
+								// Toggle aria-expanded on the title
+								title.setAttribute('aria-expanded', !isExpanded);
 
-                    // Toggle the 'elementor-active' class on the item to control content visibility
-                    item.classList.toggle('elementor-active');
+								// Toggle the 'elementor-active' class on the item to control content visibility
+								item.classList.toggle('elementor-active');
 
-                    // Optionally, you can handle the icons' appearance based on the expanded state
-                    const closedIcon = title.querySelector('.elementor-toggle-icon-closed');
-                    const openedIcon = title.querySelector('.elementor-toggle-icon-opened');
+								// Optionally, you can handle the icons' appearance based on the expanded state
+								const closedIcon = title.querySelector('.elementor-toggle-icon-closed');
+								const openedIcon = title.querySelector('.elementor-toggle-icon-opened');
 
-                    if (closedIcon && openedIcon) {
-                        closedIcon.style.display = isExpanded ? 'inline-block' : 'none';
-                        openedIcon.style.display = isExpanded ? 'none' : 'inline-block';
-                    }
+								if (closedIcon && openedIcon) {
+									closedIcon.style.display = isExpanded ? 'inline-block' : 'none';
+									openedIcon.style.display = isExpanded ? 'none' : 'inline-block';
+								}
 
-                    // Toggle aria-hidden on the content
-                    content.setAttribute('aria-hidden', isExpanded);
-                });
-            }
-        });
-    }
-});
+								// Toggle aria-hidden on the content
+								content.setAttribute('aria-hidden', isExpanded);
+							});
+						}
+					});
+				}
+			});
 		</script>
     </body>
 </html>
