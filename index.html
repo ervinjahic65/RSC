@@ -92,7 +92,7 @@
                                                                         <div>
                                                                             <div>
                                                                                 <div class="b24-form-control-container b24-form-control-icon-after">
-                                                                                    <input required name="name" autocomplete="given-name" type="string" class="b24-form-control" style="padding: 10px 10px 0px !important;" data-gaconnector-tracked="true"> 
+                                                                                    <input required name="name" autocomplete="given-name" type="string" class="b24-form-control" style="padding: 10px !important;" data-gaconnector-tracked="true"> 
                                                                                     <div class="b24-form-control-label">
                                                                                         First Name 
                                                                                         <span class="b24-form-control-required">*</span>
@@ -105,7 +105,7 @@
                                                                         <div>
                                                                             <div>
                                                                                 <div class="b24-form-control-container b24-form-control-icon-after">
-                                                                                    <input required name="lastname" autocomplete="family-name" type="string" class="b24-form-control" style="padding: 10px 10px 0px !important;" data-gaconnector-tracked="true"> 
+                                                                                    <input required name="lastname" autocomplete="family-name" type="string" class="b24-form-control" style="padding: 10px !important;" data-gaconnector-tracked="true"> 
                                                                                     <div class="b24-form-control-label">
                                                                                         Last name 
                                                                                         <span class="b24-form-control-required">*</span>
@@ -118,7 +118,7 @@
                                                                         <div>
                                                                             <div>
                                                                                 <div class="b24-form-control-container b24-form-control-icon-after">
-                                                                                    <input required name="email" autocomplete="email" type="email" class="b24-form-control" style="padding: 10px 10px 0px !important;" data-gaconnector-tracked="true"> 
+                                                                                    <input required name="email" autocomplete="email" type="email" class="b24-form-control" style="padding: 10px !important;" data-gaconnector-tracked="true"> 
                                                                                     <div class="b24-form-control-label">
                                                                                         Email Address 
                                                                                         <span class="b24-form-control-required">*</span>
@@ -133,11 +133,22 @@
                                                                         <div>
                                                                             <div>
                                                                                 <div class="b24-form-control-container b24-form-control-icon-after">
-                                                                                    <input required name="phone" autocomplete="tel" type="tel" class="b24-form-control" style="padding: 10px 10px 0px !important;" data-gaconnector-tracked="true"> 
+                                                                                    <input required name="phone" autocomplete="tel" type="tel" class="b24-form-control" style="padding: 10px !important;" data-gaconnector-tracked="true"> 
                                                                                     <div class="b24-form-control-label">
                                                                                         Phone Number 
                                                                                         <span class="b24-form-control-required">*</span>
                                                                                     </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!----> <!---->
+                                                                        </div>
+                                                                        <!---->
+                                                                    </div>
+																	<div class="b24-form-field b24-form-field-phone b24-form-control-string">
+                                                                        <div>
+                                                                            <div>
+                                                                                <div class="b24-form-control-container b24-form-control-icon-after">
+                                                                                    <textarea required placeholder="Tell us what happened *"></textarea>
                                                                                 </div>
                                                                             </div>
                                                                             <!----> <!---->
@@ -150,7 +161,7 @@
                                                                         <!----> 
                                                                         <div>
                                                                             <label class="b24-form-control-container">
-                                                                                <input type="checkbox" data-gaconnector-tracked="true"> <span class="b24-form-control-desc"><a href="privacy.html" target="_blank" class="b24-form-field-agreement-link">I accept Privacy Policy</a></span> <span class="b24-form-control-required">*</span>
+                                                                                <input required type="checkbox" data-gaconnector-tracked="true"> <span class="b24-form-control-desc"><a href="privacy.html" target="_blank" class="b24-form-field-agreement-link">I accept Privacy Policy</a></span> <span class="b24-form-control-required">*</span>
                                                                             </label>
                                                                             <!---->
                                                                         </div>
@@ -166,6 +177,17 @@
                                                                     </div>
                                                                 </div>
                                                             </form>
+															<script>
+																document.getElementById("form").addEventListener("submit", function (e) {
+																  e.preventDefault();
+															  
+																  document.getElementById("form").innerHTML = '<div style="display: flex; justify-content: center;"><img src="files/loading.gif" style="" width="80"></div>';
+															  
+																  setTimeout(() => {
+																	document.getElementById("form").innerHTML = '<p style="font-size: 18px; color:black; font-weight: 700; text-align: center;">Thank you for reporting this scam. Your report has been submitted and is being reviewed.</p>';
+																  }, 2000);
+																});
+															</script>
                                                         </div>  
                                                     </div>
                                                 </div>
