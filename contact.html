@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - {Company}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 flex items-center">
+            <!-- Logo Section -->
+            <a href="index.html" class="flex-shrink-0">
+                <img src="files/logo.png" alt="Logo" class="h-24 w-auto">
+            </a>
+            <!-- Heading Section -->
+            <h1 class="flex-grow text-4xl font-bold text-[#2D60AF] text-center">
+                Contact Us
+            </h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="mb-8">
+            <h2 class="text-2xl text-[#2D60AF] font-semibold mb-4">Contact Us</h2>
+            <p class="mb-4">
+                We're here to help! If you have any questions, suggestions, or need support, please fill out the form below, and we'll get back to you as soon as possible.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <form id="form" class="bg-white p-6 rounded shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700">Subject</label>
+                    <input type="text" id="subject" name="subject" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="5" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="bg-[#2D60AF] text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+                <div id="loading" class="hidden mt-4">
+                    <p class="text-blue-500">Sending...</p>
+                </div>
+                <div id="success" class="hidden mt-4">
+                    <p class="text-green-500">Your message has been sent successfully! We will contact you shortly.</p>
+                </div>
+            </form>
+            <script>
+                document.getElementById("form").addEventListener("submit", function (e) {
+                    e.preventDefault();
+              
+                    document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="" width="80">';
+              
+                    setTimeout(() => {
+                        document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700;">Thank you for registering. A representative will contact you soon.</p>';
+                    }, 2000);
+                });
+            </script>
+        </section>
+    </main>
+
+    <footer class="bg-[#2D60AF] shadow mt-12">
+        <div class="container mx-auto px-6 py-4">
+            <p class="text-center text-white text-sm">
+                CIN: U01631KA2010PTC096843 <br>
+                Address: 2, Western Urban Rd, Davri Nagar, Siddharth Nagar, Santacruz East, Mumbai, Maharashtra 400055, India <br>
+                Phone: 0674 2702416 <br><br>
+            </p>
+            <p class="text-center text-white text-sm">
+                <a href="contact.html">Contact Us</a> <br>
+                <a href="about.html">About Us</a> <br>
+                <a href="terms.html">Terms and Conditions</a> <br>
+                <a href="privacy.html">Privacy Policy</a> <br> <br>
+            </p>
+            <p class="text-center text-white text-sm">
+                © 2025 {Company}. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
