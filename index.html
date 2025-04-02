@@ -1273,5 +1273,42 @@
                 </div>
             </div>
         </footer>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+    const faqContainer = document.querySelector('.elementor-element-da05e92.elementor-widget-toggle');
+    if (faqContainer) {
+        const toggleItems = faqContainer.querySelectorAll('.elementor-toggle-item');
+
+        toggleItems.forEach(item => {
+            const title = item.querySelector('.elementor-tab-title');
+            const content = item.querySelector('.elementor-tab-content');
+
+            if (title && content) {
+                title.addEventListener('click', function() {
+                    const isExpanded = title.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle aria-expanded on the title
+                    title.setAttribute('aria-expanded', !isExpanded);
+
+                    // Toggle the 'elementor-active' class on the item to control content visibility
+                    item.classList.toggle('elementor-active');
+
+                    // Optionally, you can handle the icons' appearance based on the expanded state
+                    const closedIcon = title.querySelector('.elementor-toggle-icon-closed');
+                    const openedIcon = title.querySelector('.elementor-toggle-icon-opened');
+
+                    if (closedIcon && openedIcon) {
+                        closedIcon.style.display = isExpanded ? 'inline-block' : 'none';
+                        openedIcon.style.display = isExpanded ? 'none' : 'inline-block';
+                    }
+
+                    // Toggle aria-hidden on the content
+                    content.setAttribute('aria-hidden', isExpanded);
+                });
+            }
+        });
+    }
+});
+		</script>
     </body>
 </html>

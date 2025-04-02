@@ -243,3 +243,15 @@ body{
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+.elementor-toggle-item .elementor-tab-content {
+    display: none !important;
+}
+
+.elementor-toggle-item.elementor-active .elementor-tab-content {
+    display: block !important;
+}
+
+.elementor-toggle .elementor-tab-title {
+	border-bottom: unset !important;
+}
