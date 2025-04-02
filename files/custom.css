@@ -29,8 +29,8 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
 					}
 				}
 
-                @font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://secure.tandhconsult.com/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
-                @font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://secure.tandhconsult.com/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+                @font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('./Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+                @font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('./cardo_normal_400.woff2') format('woff2');}
 
                 html,
 body{
